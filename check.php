@@ -38,7 +38,7 @@ if (!empty($check)) {
       break;
     }
 
-    
+
 }else{
   header("location:index.php?meg=帳密不正確，請重新登入或註冊新帳號");
 }

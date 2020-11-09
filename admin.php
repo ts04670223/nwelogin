@@ -15,7 +15,7 @@ include_once('header.php');
 $users=$pdo->query($sql)->fetchAll();
 
 
-echo "<table class='table'>";
+echo "<table class='table table-dark col-8 mx-auto'>";
 echo"<tr>";
 echo"<td>流水號</td>";
 echo"<td>帳號</td>";
@@ -25,6 +25,7 @@ echo"<td>生日</td>";
 echo"<td>信箱</td>";
 echo"<td>地址</td>";
 echo"<td>註冊日</td>";
+echo"<td>操作</td>";
 echo"</tr>";
 
 foreach($users as $user){
@@ -37,6 +38,7 @@ foreach($users as $user){
     echo "<td>{$user['email']}</td>";
     echo "<td>{$user['addr']}</td>";
     echo "<td>{$user['create_time']}</td>";
+    echo "<td><a href='edit_user.php?id={$user['id']}'><button class='btn btn-light'>編輯</button></a></td>";
     echo'</tr>';
 }
 

@@ -15,10 +15,10 @@ $user=$pdo->query($user_sql)->fetch();
 
 ?>
 </body>
-<div class="container">
-<h2>編輯資料</h2>
-<form action="save_user.php" method="post" class="col-6">
-    <div class="list-group">
+<div class="container aligh-item-">
+<h2 class="text-center">編輯資料</h2>
+<form action="save_user.php" method="post" class="col-12">
+    <div class="list-group ">
       <input type="hidden" name="id" value="<?=$user['id']; ?>">
     <li class="list-group-item">帳號:<input type="text" name="acc" value="<?=$user['acc']?>"></li>
     <li class="list-group-item">密碼:<input type="password" name="pw"value="<?=$user['pw']?>"></li>
@@ -42,8 +42,8 @@ $user=$pdo->query($user_sql)->fetch();
     </select>
     </li>
     </div>
-    <input type="submit" value="確認修改" class="btn btn-primary my-3">
-    <input type="reset" value="重置" class="btn btn-primary my-3">
+    <input type="submit" value="確認修改" class="btn btn-primary my-3 ">
+    <input type="reset" value="重置" class="btn btn-primary my-3 ">
     
 </form>
 </div>

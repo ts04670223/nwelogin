@@ -35,10 +35,11 @@
     * email
     * 註冊時間create_time
 ##### 會員功能
+ member
     * 姓名(name)    
     * 出生年月日(birthday)    
     * 角色(含管理員)(role)
-    * 居住地(residence) 
+    * 居住地(addr) 
     * 學歷(education)
 
 

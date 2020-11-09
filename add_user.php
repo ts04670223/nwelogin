@@ -15,7 +15,7 @@ $education=$_POST['education'];
 $insert_to_login="insert into `login`(`acc`,`pw`,`email`) values('$acc','$pw','$email')";
 echo $insert_to_login;
 // echo $pdo->query($insert_to_login);
-$pdo->exec($insert_to_login);
+$pdo->exec($insert_to_login);//會回傳成功或失敗
 $select_login_user="select * from `login` where `acc`='$acc'&& `pw`='$pw'";
 $login_user=$pdo->query($select_login_user)->fetch();
 $login_id=$login_user['id'];
@@ -32,7 +32,6 @@ if($result){
   header("location:index.php?meg'新增成功'");
 }else{
   header("location:index.php?meg'新增失敗'");
-
 }
 
 

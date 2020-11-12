@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2020-11-09 02:26:37
+-- 產生時間： 2020-11-12 02:54:55
 -- 伺服器版本： 10.4.14-MariaDB
 -- PHP 版本： 7.4.10
 
@@ -35,6 +35,17 @@ CREATE TABLE `login` (
   `create_time` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- 傾印資料表的資料 `login`
+--
+
+INSERT INTO `login` (`id`, `acc`, `pw`, `email`, `create_time`) VALUES
+(1, 'admin', '1234', 'aadsadsad@sfdfds', '2020-11-04 05:51:55'),
+(2, 'mack1', '1111', 'sadsad@adsad', '2020-11-09 05:54:05'),
+(3, 'mary2', '3333', 'dasdsa@adsdsad', '2020-11-09 05:54:25'),
+(4, 'mary3', '3333', 'gsgsds@fsofjjfo', '2020-11-09 05:54:48'),
+(5, 'mary4', '4444', 'fdsfdsa@dfdsafds', '2020-11-09 05:55:14');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +61,17 @@ CREATE TABLE `member` (
   `education` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
   `login_id` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `member`
+--
+
+INSERT INTO `member` (`id`, `name`, `birthday`, `role`, `addr`, `education`, `login_id`) VALUES
+(1, '管理員', '2020-11-04', '管理員', 'afafdff', '國中', 1),
+(2, 'afdf', '2020-11-05', '會員', 'afaf', '高中', 2),
+(3, '神奇海螺', '2020-11-05', 'VIP', '泰山', '碩士', 3),
+(4, 'dsadsadsad', '2020-11-03', '會員', 'fgafdgfdg', '碩士', 4),
+(5, 'fdsfadsf', '2020-11-07', '會員', 'dfdsfa', '博士', 5);
 
 --
 -- 已傾印資料表的索引
@@ -75,13 +97,13 @@ ALTER TABLE `member`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

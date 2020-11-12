@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>一般會員中心</h1>
+    <h1>一般會員中心</h1><span><a href="logout.php">登出</a></span>
     親愛的<?php
         if (isset($_COOKIE['login'])) {
             echo $_COOKIE['login'] . "歡迎";

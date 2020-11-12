@@ -13,8 +13,9 @@
     </span>
     尊爵的
     <?php
-    if (isset($_COOKIE['login'])) {
-        echo $_COOKIE['login'] . "歡迎";
+    session_start();
+    if (isset($_SESSION['login'])) {
+        echo  $_SESSION['login'] . "歡迎";
     } ?>
     你好，歡迎你
 </body>

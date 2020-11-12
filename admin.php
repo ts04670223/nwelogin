@@ -8,19 +8,19 @@ include_once('header.php');
 
     <h1 class="text-center">管理中心</h1>
     <div class="col-8 mx-auto d-flex justify-content-between">
-<span>
-    <?php
+        <span>
+            <?php
 
-
-if (isset($_COOKIE['login'])) {
-    echo $_COOKIE['login']."歡迎";
-}
-?>
-</span>
-<span>
-<a href="logout.php">登出</a>
-</span>
-</div>
+            session_start();
+            if (isset($_SESSION['login'])) {
+                echo $_SESSION['login'] . "歡迎";
+            }
+            ?>
+        </span>
+        <span>
+            <a href="logout.php">登出</a>
+        </span>
+    </div>
 </body>
 <?php
 // if(isset($_GET['user'])){

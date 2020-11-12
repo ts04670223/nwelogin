@@ -25,6 +25,10 @@ if (!empty($check)) {
     $member_sql="select * from `member` where login_id='{$check['id']}'";
     $member=$pdo->query($member_sql)->fetch();
     $role=$member['role'];
+    session_start();
+
+    $_SESSION['login']=$acc;
+    
     setcookie("login",$acc,time()+3600);
     switch($role){
       case'會員';
@@ -42,5 +46,3 @@ if (!empty($check)) {
 }else{
   header("location:index.php?meg=帳密不正確，請重新登入或註冊新帳號");
 }
-
-?>
